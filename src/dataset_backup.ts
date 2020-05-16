@@ -14,7 +14,6 @@ limitations under the License.
 ==============================================================================*/
 
 import * as d3 from 'd3';
-import { regressTest } from './dataset_tabot';
 
 /**
  * A two dimensional example: x and y coordinates with the label.
@@ -90,12 +89,7 @@ export function regressPlane(numSamples: number, noise: number):
     let label = getLabel(x + noiseX, y + noiseY);
     points.push({x, y, label});
   }
-  console.log(points);
   return points;
-}
-
-export function regressTestWrapper(numSamples: number, noise: number): Example2D[] {
-  return regressTest(numSamples, noise);
 }
 
 export function regressGaussian(numSamples: number, noise: number):
